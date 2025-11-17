@@ -1,7 +1,6 @@
 # currency_textfield
 ![Build Status](https://img.shields.io/github/actions/workflow/status/IsaiasSantana/currency_textfield/dart.yml)
 [![pub package](https://img.shields.io/pub/v/currency_textfield.svg)](https://pub.dev/packages/currency_textfield)
-[![Buy Me A Coffee](https://img.shields.io/badge/☕%20Buy%20Me%20a%20Coffee-FFDD00?style=for-the-badge&logo=buymeacoffee&logoColor=black)](https://www.buymeacoffee.com/gian.bettega)
 
 A Controller for currency text input
 
@@ -110,5 +109,3 @@ controller.replaceCurrencySymbol('EUR');
 // reseting the current value:
 controller.replaceCurrencySymbol('EUR', resetValue: true);
 ```
-
-[![Buy Me A Coffee](https://img.shields.io/badge/☕%20Buy%20Me%20a%20Coffee-FFDD00?style=for-the-badge&logo=buymeacoffee&logoColor=black)](https://www.buymeacoffee.com/gian.bettega)
