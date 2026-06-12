@@ -587,4 +587,57 @@ void main() {
     expect(c.doubleValue, 2500000.0);
     expect(c.text, 'R\$ 2,500,000.00');
   });
+
+  test('test_clear_input_bug_with_zero_decimals', () {
+    final controller = CurrencyTextFieldController(numberOfDecimals: 0);
+    controller.text = "123";
+    expect(controller.text, "R\$ 123");
+    expect(controller.doubleValue, 123.0);
+    controller.clear();
+    expect(controller.text, "");
+    expect(controller.doubleValue, 0.0);
+  });
+
+  test('test_clear_input_works_with_decimals', () {
+    final controller = CurrencyTextFieldController();
+    controller.text = "123";
+    expect(controller.text, "R\$ 1,23");
+    expect(controller.doubleValue, 1.23);
+    controller.clear();
+    expect(controller.text, "");
+    expect(controller.doubleValue, 0.0);
+  });
+
+  test('test_delete_characters_one_by_one_with_zero_decimals', () {
+    final controller = CurrencyTextFieldController(numberOfDecimals: 0);
+    controller.text = "123";
+    expect(controller.text, "R\$ 123");
+    expect(controller.doubleValue, 123.0);
+    controller.text = "R\$ 12";
+    controller.text = "R\$ 1";
+    controller.text = "R\$";
+    expect(controller.text, "");
+    expect(controller.doubleValue, 0.0);
+  });
+
+  test('test_empty_string_input_with_zero_decimals', () {
+    final controller = CurrencyTextFieldController(numberOfDecimals: 0);
+    controller.text = "123";
+    expect(controller.text, "R\$ 123");
+    expect(controller.doubleValue, 123.0);
+    controller.text = "";
+    expect(controller.text, "");
+    expect(controller.doubleValue, 0.0);
+  });
+
+  test('test_clear_input_with_zero_decimals_and_showZeroValue', () {
+    final controller =
+        CurrencyTextFieldController(numberOfDecimals: 0, showZeroValue: true);
+    controller.text = "123";
+    expect(controller.text, "R\$ 123");
+    expect(controller.doubleValue, 123.0);
+    controller.text = "";
+    expect(controller.text, "");
+    expect(controller.doubleValue, 0.0);
+  });
 }

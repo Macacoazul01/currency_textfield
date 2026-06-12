@@ -485,13 +485,14 @@ class CurrencyTextFieldController extends TextEditingController {
 
   /// Reset controller to 0. If [clean] is `true`, also clear the text.
   void _zeroValue({bool forceNegative = false, bool clean = false}) {
+    _value = 0;
+    _isNegative = forceNegative;
+
     if (clean) {
       _previewsText = '';
       text = _previewsText;
       return;
     }
-    _value = 0;
-    _isNegative = forceNegative;
 
     if (_resetSeparator && _startWithSeparator) {
       _startWithSeparator = false;
@@ -502,6 +503,9 @@ class CurrencyTextFieldController extends TextEditingController {
   /// Returns whether the controller should clear when current text shrinks
   /// and [_showZeroValue] is on while numeric value is 0.
   bool _checkCleanZeroText(String currentText) {
+    if (currentText.isEmpty && _showZeroValue) {
+      return true;
+    }
     return _value == 0 &&
         _showZeroValue &&
         currentText.length < _previewsText.length;
