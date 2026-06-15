@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:currency_textfield/currency_textfield.dart';
+import 'package:currency_textfield_2/currency_textfield_2.dart';
 
 void main() {
   test('input_zero_results_in_empty_text', () {

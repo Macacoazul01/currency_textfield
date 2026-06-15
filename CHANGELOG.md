@@ -1,5 +1,6 @@
 ## [5.1.0] - 2026-06-12
 - Fix zero value problems + added tests (tks @IndigoSoftwares21).
+- Went back to my fork after the creator revoked my access to the original one and closed the repo.
 
 ## [5.0.0+1] - 2025-08-19
 - Added `enableAbbreviations` parameter to support K, M, B, T suffixes.

@@ -1,6 +1,6 @@
 // ignore_for_file: avoid_print
 
-import 'package:currency_textfield/currency_textfield.dart';
+import 'package:currency_textfield_2/currency_textfield_2.dart';
 import 'input_field.dart';
 import 'package:flutter/material.dart';
 

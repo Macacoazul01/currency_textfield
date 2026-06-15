@@ -1,22 +1,25 @@
-# currency_textfield
-![Build Status](https://img.shields.io/github/actions/workflow/status/IsaiasSantana/currency_textfield/dart.yml)
-[![pub package](https://img.shields.io/pub/v/currency_textfield.svg)](https://pub.dev/packages/currency_textfield)
+# currency_textfield_2
+![Build Status](https://img.shields.io/github/actions/workflow/status/Macacoazul01/currency_textfield/dart.yml)
+[![pub package](https://img.shields.io/pub/v/currency_textfield_2.svg)](https://pub.dev/packages/currency_textfield_2)
+[![Buy Me A Coffee](https://img.shields.io/badge/☕%20Buy%20Me%20a%20Coffee-FFDD00?style=for-the-badge&logo=buymeacoffee&logoColor=black)](https://www.buymeacoffee.com/gian.bettega)
 
 A Controller for currency text input
 
+As after more than 4 years maintaining the original package, the creator decided to revoke my access and archive the repo, i'm again activating this fork (that will be updated).
+
 ## Demo
-![sample](https://raw.githubusercontent.com/IsaiasSantana/currency_textfield/master/doc/gif.gif)
+![sample](https://raw.githubusercontent.com/Macacoazul01/currency_textfield/master/doc/gif.gif)
 
 ## Install
 
-Follow this [guide](https://pub.dev/packages/currency_textfield/install) 
+Follow this [guide](https://pub.dev/packages/currency_textfield_2/install) 
 
 ## Usage
 
 Import the library
 
 ```dart
-import 'package:currency_textfield/currency_textfield.dart';
+import 'package:currency_textfield_2/currency_textfield_2.dart';
 ```
 
 Create the Controller
